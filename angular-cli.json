@@ -5,20 +5,24 @@
   },
   "apps": [
     {
-      "prefix": "app",
       "root": "src",
       "outDir": "dist",
       "assets": "assets",
-      "index": "src/index.html",
-      "main": "src/main.ts",
-      "styles": [],
-      "scripts": [],
-      "tsconfig": "src/tsconfig.json",
+      "index": "index.html",
+      "main": "main.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.json",
+      "prefix": "app",
       "mobile": false,
+      "styles": [
+        "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.css"
+      ],
+      "scripts": [],
       "environments": {
-        "source": "src/app/components/environments/environment.ts",
-        "prod": "src/app/components/environments/environment.prod.ts",
-        "dev": "src/app/components/environments/environment.dev.ts"
+        "source": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts",
+        "dev": "environments/environment.dev.ts"
       }
     }
   ],
@@ -26,12 +30,12 @@
   "packages": [],
   "e2e": {
     "protractor": {
-      "config": "config/protractor.conf.js"
+      "config": "./protractor.conf.js"
     }
   },
   "test": {
     "karma": {
-      "config": "config/karma.conf.js"
+      "config": "./karma.conf.js"
     }
   },
   "defaults": {
