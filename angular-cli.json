@@ -1,13 +1,25 @@
 {
   "project": {
-    "version": "1.0.0-beta.11-webpack.2",
+    "version": "1.0.0-beta.11-webpack.8",
     "name": "workremote-frontend"
   },
   "apps": [
     {
+      "prefix": "app",
+      "root": "src",
+      "outDir": "dist",
+      "assets": "assets",
+      "index": "src/index.html",
       "main": "src/main.ts",
+      "styles": [],
+      "scripts": [],
       "tsconfig": "src/tsconfig.json",
-      "mobile": false
+      "mobile": false,
+      "environments": {
+        "source": "src/app/components/environments/environment.ts",
+        "prod": "src/app/components/environments/environment.prod.ts",
+        "dev": "src/app/components/environments/environment.dev.ts"
+      }
     }
   ],
   "addons": [],
@@ -23,8 +35,6 @@
     }
   },
   "defaults": {
-    "prefix": "app",
-    "sourceDir": "src",
     "styleExt": "css",
     "prefixInterfaces": false,
     "lazyRoutePrefix": "+"
