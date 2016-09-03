@@ -3,10 +3,19 @@
   box-sizing: border-box;
 }
 
+$bg-gradient-from: #394b62;
+$bg-gradient-to: #202d3c;
+$green-button-gradient-from: #71ddca;
+$green-button-gradient-to: #53c0b5;
+$grey-text: #626f7f;
+
 
 body {
-  background-image: url("./assets/bg.jpg");
   font-family: 'Roboto', sans-serif;
+
+  /* will be "on top", if browser supports it */
+  background-image: linear-gradient($bg-gradient-from, $bg-gradient-to);
+  min-height: 1450px;
 }
 
 .wr {
@@ -14,5 +23,28 @@ body {
     font-family: 'Roboto', sans-serif;
     color: white;
   }
+
+  button {
+    &.primary-btn {
+      background-image: linear-gradient($green-button-gradient-from, $green-button-gradient-to);
+      border: none;
+      border-radius: 40px;
+      color: white;
+      padding: 5px;
+      width: 124px;
+    }
+  }
+
+  a {
+    color: white;
+    &:hover {
+      color: $green-button-gradient-to;
+    }
+  }
+
+  p {
+    color: $grey-text;
+  }
+
 }
 

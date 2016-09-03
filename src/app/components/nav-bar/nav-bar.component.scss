@@ -1,0 +1,29 @@
+nav {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.logo {
+  display: inline-block;
+
+  a {
+    text-decoration: none !important;
+  }
+
+  a:hover {
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+  }
+}
+
+.logo-image {
+  width: 85px;
+}
+
+.title {
+  letter-spacing: 4px;
+  display: inline;
+}
+
+

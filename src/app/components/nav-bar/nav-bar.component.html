@@ -3,7 +3,15 @@
   <!--<button class="btn btn-primary btn-margin" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>-->
   <!--<button class="btn btn-primary btn-margin" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>-->
 <!--</nav>-->
-<div class="logo">
-  <img class="logo-image" src="../../../assets/wr.png" alt="work remote logo">
-  <h3 class="title">workremote.io</h3>
-</div>
+<nav class="container">
+  <div class="logo">
+    <a href="/">
+      <h3 class="title">workremote.io</h3>
+    </a>
+
+  </div>
+  <a routerLink="/about" routerLinkActive="active">About</a>
+  <button class="primary-btn pull-lg-right">Login</button>
+</nav>
+
+
