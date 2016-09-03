@@ -1,0 +1,14 @@
+.logo {
+  display: inline-block;
+}
+
+.logo-image {
+  width: 85px;
+}
+
+.title {
+  letter-spacing: 4px;
+  display: inline;
+}
+
+
