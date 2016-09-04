@@ -24,12 +24,21 @@ body {
     color: white;
   }
 
-  @keyframes highlightme {
+  @keyframes highlight-button-in {
     0%{
       background-position:0% 96%
     }
     100%{
       background-position:100% 5%
+    }
+  }
+
+  @keyframes highlight-button-out {
+    0%{
+      background-position:100% 5%
+    }
+    100%{
+      background-position:0% 96%
     }
   }
 
@@ -43,9 +52,14 @@ body {
       padding: 5px;
       width: 124px;
 
+      animation-duration: 1s;
+      animation-name: highlight-button-out;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+
       &:hover {
         animation-duration: 1s;
-        animation-name: highlightme;
+        animation-name: highlight-button-in;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
 
