@@ -1,24 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+/* global styles */
+@import 'variables';
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
-
-$bg-gradient-from: #394b62;
-$bg-gradient-to: #202d3c;
-$green-button-gradient-from: #71ddca;
-$green-button-gradient-to: #53c0b5;
-$grey-text: #626f7f;
 
 
 body {
   font-family: 'Roboto', sans-serif;
 
-  /* will be "on top", if browser supports it */
-  background-image: linear-gradient($bg-gradient-from, $bg-gradient-to);
+  ///* will be "on top", if browser supports it */
+  //background-image: linear-gradient($bg-gradient-from, $bg-gradient-to);
+
   min-height: 1450px;
 }
 
 .wr {
+  background-color: rgba(68,124,157,1);
+
+  .bg-gradient {
+    width: 100%;
+    height: 80vw;
+    position: absolute;
+    margin-top: -44vw;
+    top: 0px;
+    z-index: -1;
+
+    background: rgba(115,187,192,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(115,187,192,1) 0%, rgba(68,124,157,1) 52%, rgba(68,124,157,1) 73%, rgba(68,124,157,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(115,187,192,1)), color-stop(52%, rgba(68,124,157,1)), color-stop(73%, rgba(68,124,157,1)), color-stop(100%, rgba(68,124,157,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(115,187,192,1) 0%, rgba(68,124,157,1) 52%, rgba(68,124,157,1) 73%, rgba(68,124,157,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(115,187,192,1) 0%, rgba(68,124,157,1) 52%, rgba(68,124,157,1) 73%, rgba(68,124,157,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(115,187,192,1) 0%, rgba(68,124,157,1) 52%, rgba(68,124,157,1) 73%, rgba(68,124,157,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(115,187,192,1) 0%, rgba(68,124,157,1) 52%, rgba(68,124,157,1) 73%, rgba(68,124,157,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73bbc0', endColorstr='#447c9d', GradientType=1 );
+  }
+
   h1, h2, h3, h4, h5 {
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -75,6 +92,12 @@ body {
 
   p {
     color: $grey-text;
+  }
+
+  .sk-cube-grid {
+    div {
+      background-color: $green-button-gradient-to;
+    }
   }
 
 }

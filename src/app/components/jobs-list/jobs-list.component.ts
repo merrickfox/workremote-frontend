@@ -9,11 +9,17 @@ import {JobsService} from "../../services/jobs/jobs.service";
 })
 export class JobsListComponent implements OnInit {
   jobs;
+  showLoader: boolean;
+
   constructor(private jobsService: JobsService) { }
 
   ngOnInit() {
+    this.showLoader = true;
     this.jobsService.getJobs().subscribe(
-      jobs => this.jobs = jobs,
+      jobs => {
+        this.jobs = jobs;
+        this.showLoader = false;
+      },
       error =>  console.log(error));
   }
 
